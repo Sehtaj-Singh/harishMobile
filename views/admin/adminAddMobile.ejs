@@ -1,0 +1,44 @@
+<%- include(`../partials/head`) %>
+  <title>adminAddMobile</title>
+  <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+    
+  <%- include(`../partials/adminHeader`) %>
+   
+  <div id="amdiv">
+
+       <h2 id="amh2">Second-hand Phones</h2>
+       <form id="amform" action="/Admin/addMobile" method="POST" >
+        <input id="aminput" type="text" name="SHmobile" placeholder=" Second-Hand Mobile Name" required />
+        <input id="aminput" type="text" name="SHprice" placeholder="Price" required />
+        <p>Front page Image for card :-</p>
+        <input id="aminputF" type="file" name="SHimage" required />
+        <input id="aminput" type="text" name="condition" placeholder="Condition" required />
+        <input id="aminput" type="text" name="SHdiscount" placeholder="Discount (%)" />
+        <input id="aminputS" type="submit" value="Add Second-hand Phone" />
+        </form>
+
+       <h2 id="amh2">New Phones</h2>
+       <form id="amform" action="/Admin/list/new" method="POST" enctype="multipart/form-data">
+         <input id="aminput" type="text" name="name" placeholder="Mobile Name" required />
+         <input id="aminput" type="text" name="price" placeholder="Price" required />
+         <p>Front page Image for card :-</p>
+         <input id="aminputF" type="file" name="image" required />
+         <input id="aminput" type="text" name="discount" placeholder="Discount (%)" />
+         <input id="aminputS" type="submit" value="Add New Phone" />
+       </form>
+
+      <h2 id="amh2">Accessories</h2>
+      <form id="amform" action="/Admin/list/accessories" method="POST" enctype="multipart/form-data">
+        <input id="aminput" type="text" name="name" placeholder="Accessory Name" required />
+        <input id="aminput" type="text" name="price" placeholder="Price" required />
+        <p>Front page Image for card :-</p>
+        <input id="aminputF" type="file" name="image" required />
+        <input id="aminput" type="text" name="discount" placeholder="Discount (%)" />
+        <input id="aminputS" type="submit" value="Add Accessory" />
+      </form>
+
+ </div> 
+</body>
+</html>

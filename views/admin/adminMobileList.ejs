@@ -1,0 +1,38 @@
+<%- include(`../partials/head`) %>
+<link rel="stylesheet" href="/css/admin.css">
+  <title>adminMobileList</title>
+</head>
+<body>
+  <%- include(`../partials/adminHeader`) %>
+
+  <h1 id="test"> here are registered homes</h1>
+
+<ul id="card">
+  <% registeredHomes.forEach(home => { %>
+  <li id="cardicon">
+    <img src="/uploads/<%= home.SHimage %>" alt="mobile image" width="200" /
+    <h3><%= home.SHmobile   %> </h3>
+    <h3><%= home.SHprice   %> </h3>
+    
+    <h3><%= home.condition   %> </h3>
+    <h3><%= home.SHdiscount  %> </h3>
+    
+
+
+    <a href="/homes/<%= home._id  %>">details</a>
+
+    
+    
+     
+    
+   
+
+
+  </li>
+  <% })  %>
+
+
+</ul>
+
+</body>
+</html>
