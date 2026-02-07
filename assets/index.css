@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent; /* Mobile tap flash */
+  outline: none;
+}
+
+a:focus,
+a:active,
+button:focus,
+button:active {
+  outline: none;
+  box-shadow: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  padding-top: 5vh;
+}
+
+/* =========================================================
+   HEADER (GLASSMORPHISM)
+========================================================= */
+.site-header {
+  position: fixed;
+  top: 0vh;
+  background-color: #323a40;
+  padding: 1vh 3vw;
+  width: 94vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+  border-bottom: 1px solid #0e192a;
+  box-shadow: 2px 1px 10px #0e192a;
+}
+
+.logo {
+  font-size: 2vh;
+  font-weight: 600;
+  color: #1f7a3f;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+#i-1 {
+  width: 40vw;
+  margin-right: 2vw;
+}
+
+
+.nav-links {
+  display: none;
+  gap: 28px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #f5f7f8;
+}
+
+.menu-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.3rem;
+  color: #f5f7f8;
+  cursor: pointer;
+  margin-right: 2vw;
+}
+@media (min-width: 768px) {
+  #i-1 {
+    width: 12vw;
+  }
+  #i-2 {
+    width: 40vw;
+  }
+  .menu-btn {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .menu-btn {
+    display: none;
+  }
+  #i-1 {
+    width: 6vw;
+  }
+  #i-2 {
+    width: 20vw;
+  }
+
+  .nav-links {
+    display: flex;
+  }
+}
+
+
+/* ===== image slider ===== */
+
+.carousel {
+  margin-left: 3vw;
+  width: 94vw;
+  margin-top: 2vh;
+  overflow: hidden;
+  
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+/* one full image on mobile */
+.slide {
+  flex: 0 0 100%;
+  
+}
+
+.slide img {
+  width: 100%;
+  border-radius: 18px;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* dots */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.carousel-dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #cfcfcf;
+  cursor: pointer;
+}
+
+.carousel-dots span.active {
+  background: #111;
+}
+
+/* ===== DESKTOP / LAPTOP ===== */
+@media (min-width: 1024px) {
+
+  .carousel {
+    padding: 0 80px; /* space to show half images */
+  }
+
+  .slide {
+    flex: 0 0 60%; /* center image */
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+
+  .slide img {
+    height: 320px;
+    border-radius: 14px;
+  }
+}
