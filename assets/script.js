@@ -99,5 +99,53 @@ document.addEventListener("DOMContentLoaded", () => {
   }, 4000);
 
   // Dynamic footer year
-  document.getElementById("currentYear").textContent = new Date().getFullYear();
+  const yearElement = document.getElementById("currentYear");
+if (yearElement) {
+  yearElement.textContent = new Date().getFullYear();
+}
+
+
+  // ========sanity====================
+
+  const projectId = "m6ggu8sz";
+const dataset = "production";
+
+const query = encodeURIComponent(`
+  *[_type == "mobile"]{
+    brand,
+    model,
+    price,
+    "imageUrl": image.asset->url
+  }
+`);
+
+const url = `https://${projectId}.api.sanity.io/v2023-01-01/data/query/${dataset}?query=${query}`;
+
+fetch(url)
+  .then(res => res.json())
+  .then(data => {
+
+    console.log("Sanity Data:", data);
+
+    const container = document.getElementById("bnSlider");
+    if (!container) return;
+
+    container.innerHTML = "";
+
+    data.result.forEach(item => {
+
+      const card = `
+        <div class="bn-card">
+          ${item.imageUrl ? `<img src="${item.imageUrl}" alt="${item.model}" />` : ""}
+          <div class="bn-name">${item.brand || ""} ${item.model || ""}</div>
+          <div class="bn-price">${item.price || ""}</div>
+        </div>
+      `;
+
+      container.innerHTML += card;
+    });
+
+  })
+  .catch(error => console.error("Error fetching Sanity data:", error));
+
 });
