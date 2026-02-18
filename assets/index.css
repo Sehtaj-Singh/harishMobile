@@ -21,7 +21,7 @@ html {
   scroll-behavior: smooth;
 }
 
-body{
+body {
   padding-top: 5vh;
 }
 
@@ -55,7 +55,6 @@ body{
   width: 40vw;
   margin-right: 2vw;
 }
-
 
 .nav-links {
   display: none;
@@ -105,7 +104,6 @@ body{
   }
 }
 
-
 /* ===== image slider ===== */
 
 .carousel {
@@ -113,7 +111,7 @@ body{
   width: 94vw;
   margin-top: 2vh;
   overflow: hidden;
-  
+
   position: relative;
 }
 
@@ -156,7 +154,6 @@ body{
 
 /* ===== DESKTOP / LAPTOP ===== */
 @media (min-width: 1024px) {
-
   .carousel {
     padding: 0 80px; /* space to show half images */
   }
@@ -175,8 +172,7 @@ body{
 
 /* ===========category============ */
 
-#cat-title{
-  position: relative;
+#cat-title {
   font-family: "Alegreya SC", serif;
   color: #0e192a;
   font-size: 4vh;
@@ -184,40 +180,41 @@ body{
   text-decoration: underline;
   margin-left: 4vw;
   margin-bottom: 3vh;
+  font-weight: 400;
 }
-.upper-cat{
+.upper-cat {
   display: flex;
   margin-bottom: 3vh;
 }
-#cat{
+#cat {
   width: 45vw;
   position: relative;
   overflow: hidden;
   border-radius: 10px;
   margin-left: 3vw;
   margin-right: 4vw;
-  background: url("./images/cat-refurb.jpg")center / cover no-repeat;
+  background: url("./images/cat-refurb.jpg") center / cover no-repeat;
   aspect-ratio: 4000/2500;
   border: 2px solid #0e192aaa;
 }
-#cat2{
+#cat2 {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
   width: 45vw;
-  background: url("./images/cat-new.jpg")center / cover no-repeat;
+  background: url("./images/cat-new.jpg") center / cover no-repeat;
   aspect-ratio: 4000/2500;
   border: 2px solid #0e192aaa;
 }
 
-#cat3{
+#cat3 {
   width: 94vw;
   position: relative;
   overflow: hidden;
   border-radius: 10px;
   border: 2px solid #0e192aaa;
   margin-left: 3vw;
-  background: url("./images/cat-accessory.png")center / cover no-repeat;
+  background: url("./images/cat-accessory.png") center / cover no-repeat;
   aspect-ratio: 2046/839;
 }
 
@@ -244,12 +241,12 @@ body{
   bottom: 1vh;
 }
 
-#cat3-data{
-   position: absolute;
-   right: 3vw;
-   z-index: 2;
-   display: flex;
-   flex-direction: column;
+#cat3-data {
+  position: absolute;
+  right: 3vw;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
   bottom: 3vh;
   gap: 3vh;
 }
@@ -260,18 +257,17 @@ body{
   font-size: 5vw;
   font-family: "Overlock SC", sans-serif;
   letter-spacing: 1px;
-  
 }
 #cat-shop {
   color: #f5f7f8;
   font-size: 4vw;
   font-weight: 300;
   padding: 3px;
-  width: 20vw;
   padding: 1vh 3vw;
   letter-spacing: 1px;
   border: 2px solid #f5f7f8;
   border-radius: 5px;
+  width: fit-content;
 }
 
 /* =================top sellers======== */
@@ -281,10 +277,14 @@ body{
 }
 
 .section-title {
-  font-size: 28px;
-  font-weight: 600;
-  margin-bottom: 40px;
-  text-align: center;
+  text-align: start;
+  font-family: "Alegreya SC", serif;
+  color: #0e192a;
+  font-size: 3.5vh;
+  letter-spacing: 1px;
+  text-decoration: underline;
+  font-weight: 400;
+  margin-bottom: 4vh;
 }
 
 .mobile-grid {
@@ -305,21 +305,24 @@ body{
   height: 200px;
   background: #f5f5f5; /* placeholder */
   margin-bottom: 15px;
+  border-radius: 14px;
 }
 
-.mobile-image img{
+.mobile-image img {
   width: 80%;
 }
 
 .mobile-title {
   font-size: 16px;
   font-weight: 500;
+  font-family: "Alice", serif;
   margin-bottom: 8px;
 }
 
 .mobile-price {
   font-size: 18px;
   font-weight: 600;
+  font-family: "Alice", serif;
   color: #e60023;
 }
 
@@ -337,18 +340,22 @@ body{
   }
 }
 
-
 /* ================= BRAND NEW SLIDER ================= */
 
 .bn-section {
   background: #f5f7f8;
-  padding: 60px 5%;
+  
 }
 
 .bn-title {
-  font-size: 28px;
-  font-weight: 600;
-  margin-bottom: 30px;
+  text-align: start;
+  font-family: "Alegreya SC", serif;
+  color: #0e192a;
+  font-size: 3.5vh;
+  letter-spacing: 1px;
+  text-decoration: underline;
+  font-weight: 400;
+  margin-bottom: 2vh;
 }
 
 .bn-slider-wrapper {
@@ -359,15 +366,17 @@ body{
 .bn-slider {
   display: flex;
   gap: 20px;
+  padding: 3vh 4vw;
 }
 
 .bn-card {
-  min-width: 220px;
-  background: #ffffff;
+  width: 40vw;
+  background: #f5f7f8;
+  box-shadow: 3px 3px 3px #d0d2d3, -3px -3px 3px #ffffff;
   border-radius: 12px;
   padding: 15px;
   flex-shrink: 0;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
   transition: 0.3s ease;
 }
 
@@ -410,4 +419,124 @@ body{
   .bn-card {
     min-width: 300px;
   }
+}
+
+/* ===================repair============= */
+#repair {
+  display: flex;
+  flex-direction: column;
+}
+#repair-title {
+  text-align: start;
+  font-family: "Alegreya SC", serif;
+  color: #0e192a;
+  font-size: 3.5vh;
+  letter-spacing: 1px;
+  text-decoration: underline;
+  font-weight: 400;
+  margin-bottom: 2vh;
+  margin-left: 3vw;
+}
+.repair-data {
+  margin-top: 3vh;
+  margin-bottom: 4vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5vh;
+  justify-content: space-around;
+}
+.repair-data p {
+  font-size: 19px;
+  width: 85vw;
+  text-align: justify;
+  font-family: "Alice", serif;
+}
+
+.repair-data a {
+  text-decoration: none;
+  display: inline-block;
+  width: fit-content;
+ color: white;
+  background-color: #323a40;
+  padding: 0.8vh 4vw;
+  border-radius: 12px;
+  font-size: 18px;
+}
+
+.repair-img {
+  width: 90vw;
+  margin-left: 5vw;
+}
+
+.repair-img img {
+  width: 90vw;
+  border-radius: 12px;
+}
+
+/* ================contact========== */
+
+.contact-section h2{
+   text-align: start;
+  font-family: "Alegreya SC", serif;
+  color: #0e192a;
+  font-size: 3.5vh;
+  letter-spacing: 1px;
+  text-decoration: underline;
+  font-weight: 400;
+  margin-bottom: 2vh;
+  margin-left: 3vw;
+}
+.contact-conatiner{
+  width: 100vw;
+  position: relative;
+}
+
+#map{
+width:80vw;
+position: absolute;
+right: 3vw;
+border-radius: 12px;
+}
+
+.contact-icons{
+  position: absolute;
+  z-index: 2;
+  left: 3vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.ribon-name i{
+  font-size: 2.3vh;
+}
+.ribon-name h3{
+  font-size: 2.3vh;
+}
+.ribon-name{
+  display: flex;
+  color: #0e2a47;
+  font-family: "Inika", serif;
+  gap: 3vw;
+}
+
+.contact-icon{
+  margin-top: 4vh;
+  margin-bottom: 1vh;
+  font-size: 17px;
+  color: #0e2a47;
+  font-family: "Inika", serif;
+  display: block;
+  z-index: 3;
+  background-color: #566f7c;
+  width: 40vw;
+  border-top-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  box-shadow: 2px 6px 8px #00000095;
+  background: linear-gradient(135deg, #ddecff 0%, #a8c8fc 50%, #617394 100%);
+  padding: 1vh 5vw;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
