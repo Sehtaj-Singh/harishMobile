@@ -370,7 +370,7 @@ body {
 }
 
 .bn-card {
-  width: 40vw;
+  width: 50vw;
   background: #f5f7f8;
   box-shadow: 3px 3px 3px #d0d2d3, -3px -3px 3px #ffffff;
   border-radius: 12px;
@@ -406,6 +406,222 @@ body {
 /* Hide scrollbar */
 .bn-slider-wrapper::-webkit-scrollbar {
   display: none;
+}
+
+.mobileRating {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin-top: 7px;
+}
+
+/* wrapper that holds both layers */
+.mobileRating .star-wrapper {
+  position: relative;
+  display: inline-block;
+  font-size: 1.3vh;
+  line-height: 1;
+}
+
+/* background (empty) stars */
+.mobileRating .stars-empty {
+  color: #ddd;
+  display: block;
+  white-space: nowrap;
+}
+
+/* filled stars overlay; width will be controlled by JS */
+.mobileRating .stars-filled {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  color: #f5c518;
+  pointer-events: none;
+}
+
+/* keep star spacing same in both layers */
+.mobileRating .stars-empty i,
+.mobileRating .stars-filled i {
+  margin-right: 2px;
+  font-size: inherit;
+}
+
+/* number styling (you already had this) */
+.rating-number {
+  font-size: 1.7vh;
+  color: #192f49c5;
+  margin-left: 5px;
+  font-family: "Alice", serif;
+}
+
+#CardWrapper {
+  background-color: #f5f7f8;
+  width: 100vw;
+  /* margin-left: 2vw; */
+  margin-top: 1vh;
+}
+
+.sectionHeading {
+  background-color: #f5f7f8;
+  display: flex;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 7px;
+}
+
+#cardHeading {
+  font-family: "Alice", serif;
+  color: #192f49;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin-left: 2vw;
+}
+
+.viewAllLink {
+  margin-left: auto;
+  text-decoration: none;
+  margin-right: 5vw;
+  color: #192f49;
+  font-family: "Alice", serif;
+  border-bottom: 1.5px solid #192f49;
+}
+
+.CardSection {
+  background: #f5f7f8;
+  height: auto;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 5vw;
+  padding: 1rem;
+  scroll-padding: 3vw;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-gutter: stable both-edges;
+}
+
+.CardSection::-webkit-scrollbar {
+  display: none;
+}
+
+.MobileCard {
+  border-radius: 14px;
+  background: #f5f7f8;
+  box-shadow: 3px 3px 3px #d0d2d3, -3px -3px 3px #ffffff;
+  padding: 0.6rem;
+  scroll-snap-align: start;
+  position: relative;
+  text-decoration: none;
+  width: 43vw;
+  flex-shrink: 0;
+  display: block;
+}
+
+.cardLogo {
+  position: absolute;
+  left: 0px;
+  top: 2px;
+  height: 0.8rem;
+  
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}
+
+#card-name {
+  color: #323a40;
+  font-size: 2.1vh;
+  font-family: "Arsenal", sans-serif;
+  font-weight: bold;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  line-height: 1.2em;
+  max-height: 2.4em;
+}
+#card-discout {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  margin-top: 0.7vh;
+  margin-bottom: 0.5vh;
+}
+
+.finalPriceWrap {
+  position: relative;
+  display: inline-block;
+}
+
+#ribbon-wrap {
+  filter: drop-shadow(2px 2px 0.7px #192f4965);
+}
+
+.finalPrice {
+  position: relative;
+  left: -1rem;
+  color: #f5f7f8;
+  width: 75%;
+  background-color: #192f49;
+  padding: 0.2rem 0.8rem;
+  font-family: "Alice", serif;
+  border-top-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+  font-size: 5vw;
+  font-weight: bold;
+  padding-left: 18px;
+  z-index: 1;
+  letter-spacing: 2px;
+}
+
+.cornerRibbonLeft {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 10px 10px; /* half corner */
+  border-color: transparent transparent #192f49d3 transparent;
+  position: relative;
+  bottom: 0;
+  left: -1rem;
+  z-index: 2;
+  transform: rotate(-90deg);
+}
+
+.mobilecCondition {
+  font-size: 3vw;
+  color: #454545;
+  margin-top: 0.5vh;
+  font-family: "Alice", serif;
+}
+
+.mobileDiscount {
+  text-align: center;
+  font-size: 4.5vw;
+  color: #d32f2f;
+  font-weight: bold;
+  font-family: "Alice", serif;
+}
+
+.mobileMRP {
+  text-decoration: line-through;
+  color: #454545ca;
+  font-size: 4.5vw;
+  font-family: "Alice", serif;
+  letter-spacing: 1px;
+}
+
+/* Main image */
+.mobileImage {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-top: 2vh;
+  margin-bottom: 1vh;
 }
 
 /* Desktop wider cards */

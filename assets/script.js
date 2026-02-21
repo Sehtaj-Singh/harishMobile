@@ -100,52 +100,106 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Dynamic footer year
   const yearElement = document.getElementById("currentYear");
-if (yearElement) {
-  yearElement.textContent = new Date().getFullYear();
-}
-
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+  }
 
   // ========sanity====================
 
   const projectId = "m6ggu8sz";
-const dataset = "production";
+  const dataset = "production";
 
-const query = encodeURIComponent(`
+  const query = encodeURIComponent(`
   *[_type == "mobile"]{
+    _id,
     brand,
     model,
+    mrp,
+    discount,
     price,
+    rating,
     "imageUrl": image.asset->url
   }
 `);
 
-const url = `https://${projectId}.api.sanity.io/v2023-01-01/data/query/${dataset}?query=${query}`;
+  const url = `https://${projectId}.api.sanity.io/v2023-01-01/data/query/${dataset}?query=${query}`;
 
-fetch(url)
-  .then(res => res.json())
-  .then(data => {
+  fetch(url)
+    .then((res) => res.json())
+    .then((data) => {
+      console.log("Sanity Data:", data);
 
-    console.log("Sanity Data:", data);
+      const container = document.getElementById("bnSlider");
+      if (!container) return;
 
-    const container = document.getElementById("bnSlider");
-    if (!container) return;
+      container.innerHTML = "";
 
-    container.innerHTML = "";
+      data.result.forEach((item) => {
+        const rating = item.rating || 0;
 
-    data.result.forEach(item => {
+        const card = `
+    <a class="MobileCard" href="#" data-id="${item._id || ""}">
+      
+      <img class="cardLogo" src="assets/images/cardLogo1.png" />
 
-      const card = `
-        <div class="bn-card">
-          ${item.imageUrl ? `<img src="${item.imageUrl}" alt="${item.model}" />` : ""}
-          <div class="bn-name">${item.brand || ""} ${item.model || ""}</div>
-          <div class="bn-price">${item.price || ""}</div>
+      <div id="card-image">
+        ${item.imageUrl ? `<img class="mobileImage" src="${item.imageUrl}" alt="mobile image" />` : ""}
+      </div>
+
+      <div id="card-details">
+
+        <h3 id="card-name">${item.brand || ""} ${item.model || ""}</h3>
+
+        <p class="mobileRating">
+          <span class="star-wrapper" data-rating="${rating}">
+            <span class="stars-empty">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </span>
+            <span class="stars-filled" style="width:${(rating / 5) * 100}%">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </span>
+          </span>
+
+          <span class="rating-number">
+            ${rating.toFixed(1)}
+          </span>
+        </p>
+
+        <div id="card-discout">
+          <div class="mobileDiscount">-${item.discount || 0}%</div>
+          <div class="mobileMRP">₹${item.mrp ? item.mrp.toLocaleString("en-IN") : ""}</div>
         </div>
-      `;
 
-      container.innerHTML += card;
-    });
+        <div class="finalPriceWrap">
+          <div id="ribbon-wrap">
+            <div class="finalPrice">
+              ₹${item.price ? item.price.toLocaleString("en-IN") : ""}
+            </div>
+          </div>
+          <div class="cornerRibbonLeft"></div>
+        </div>
 
-  })
-  .catch(error => console.error("Error fetching Sanity data:", error));
+      </div>
+    </a>
+  `;
 
+        container.innerHTML += card;
+      });
+    })
+    .catch((error) => console.error("Error fetching Sanity data:", error));
+
+  document.querySelectorAll(".star-wrapper").forEach(function (wrapper) {
+    const rating = parseFloat(wrapper.dataset.rating) || 0;
+    const pct = (rating / 5) * 100; // e.g. 4.2 -> 84
+    const filled = wrapper.querySelector(".stars-filled");
+    if (filled) filled.style.width = pct + "%";
+  });
 });
