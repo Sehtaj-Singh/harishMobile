@@ -128,7 +128,7 @@ body {
 .slide img {
   width: 100%;
   border-radius: 18px;
-  height: 220px;
+  aspect-ratio: 1680/945;
   object-fit: cover;
 }
 
@@ -177,7 +177,7 @@ body {
   color: #0e192a;
   font-size: 4vh;
   letter-spacing: 1px;
-  text-decoration: underline;
+  
   margin-left: 4vw;
   margin-bottom: 3vh;
   font-weight: 400;
@@ -282,7 +282,7 @@ body {
   color: #0e192a;
   font-size: 3.5vh;
   letter-spacing: 1px;
-  text-decoration: underline;
+  
   font-weight: 400;
   margin-bottom: 4vh;
 }
@@ -353,7 +353,7 @@ body {
   color: #0e192a;
   font-size: 3.5vh;
   letter-spacing: 1px;
-  text-decoration: underline;
+  
   font-weight: 400;
   margin-bottom: 2vh;
 }
@@ -617,11 +617,16 @@ body {
 
 /* Main image */
 .mobileImage {
-  width: 100%;
+  width: 90%;
   height: auto;
   border-radius: 6px;
   margin-top: 2vh;
   margin-bottom: 1vh;
+}
+#card-image{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Desktop wider cards */
@@ -648,7 +653,7 @@ body {
   color: #0e192a;
   font-size: 3.5vh;
   letter-spacing: 1px;
-  text-decoration: underline;
+  
   font-weight: 400;
   margin-bottom: 2vh;
   margin-left: 3vw;
@@ -698,7 +703,7 @@ body {
   color: #0e192a;
   font-size: 3.5vh;
   letter-spacing: 1px;
-  text-decoration: underline;
+  
   font-weight: 400;
   margin-bottom: 2vh;
   margin-left: 3vw;
