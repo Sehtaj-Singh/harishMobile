@@ -78,10 +78,7 @@ body {
 }
 @media (min-width: 768px) {
   #i-1 {
-    width: 12vw;
-  }
-  #i-2 {
-    width: 40vw;
+    width: 25vw;
   }
   .menu-btn {
     font-size: 1.8rem;
@@ -111,7 +108,6 @@ body {
   width: 94vw;
   margin-top: 2vh;
   overflow: hidden;
-
   position: relative;
 }
 
@@ -152,10 +148,24 @@ body {
   background: #111;
 }
 
+@media (min-width: 768px) {
+  .carousel {
+    width: 90vw;
+    margin-left: 5vw;
+  }
+  .slide img {
+    border-radius: 24px;
+  }
+  .carousel-dots span {
+    width: 12px;
+    height: 12px;
+  }
+}
+
 /* ===== DESKTOP / LAPTOP ===== */
 @media (min-width: 1024px) {
   .carousel {
-    padding: 0 80px; /* space to show half images */
+    padding: 0 80px;
   }
 
   .slide {
@@ -177,8 +187,7 @@ body {
   color: #0e192a;
   font-size: 4vh;
   letter-spacing: 1px;
-  
-  margin-left: 4vw;
+  margin-left: 5vw;
   margin-bottom: 3vh;
   font-weight: 400;
 }
@@ -269,6 +278,44 @@ body {
   border-radius: 5px;
   width: fit-content;
 }
+@media (min-width: 768px) {
+  #cat,
+  #cat2,
+  #cat3 {
+    border-radius: 20px;
+  }
+  #cat-title{
+    font-size: 4.5vh;
+  }
+
+  #cat{
+    width: 40vw;
+    margin-left: 6vw;
+    margin-right: 7vw;
+  }
+  #cat2{
+    width: 40vw;
+  }
+  .upper-cat{
+    margin-bottom: 3vh;
+  }
+  #cat3{
+    width: 87vw;
+    margin-left: 6vw;
+  }
+  #cat h3,
+  #cat2 h3 {
+    font-size: 3.5vw;
+    left: 2vw;
+    bottom: 2vh;
+  }
+  #cat3-data {
+    bottom: 7vh;
+  }
+  #cat-shop {
+    border-radius: 15px;
+  }
+}
 
 /* =================top sellers======== */
 .top-sellers {
@@ -280,9 +327,8 @@ body {
   text-align: start;
   font-family: "Alegreya SC", serif;
   color: #0e192a;
-  font-size: 3.5vh;
+  font-size: 4vh;
   letter-spacing: 1px;
-  
   font-weight: 400;
   margin-bottom: 4vh;
 }
@@ -331,6 +377,18 @@ body {
   .mobile-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+  .mobile-title {
+    font-size: 24px;
+  }
+  .section-title{
+    font-size: 4.5vh;
+  }
+  .mobile-price {
+    font-size: 26px;
+  }
+  .mobile-image img {
+    width: 60%;
+  }
 }
 
 /* Desktop */
@@ -354,9 +412,8 @@ body {
   font-weight: 400;
   margin-bottom: 2vh;
   padding-top: 2vh;
-  padding-left: 3vw;
+  padding-left: 5vw;
 }
-
 
 .bn-slider-wrapper {
   overflow-x: auto;
@@ -385,17 +442,19 @@ body {
   text-decoration: none;
   position: relative;
   display: block;
-  
-  box-shadow: 3px 3px 6px #d0d2d3,
-              -3px -3px 6px #ffffff;
+
+  box-shadow:
+    3px 3px 6px #d0d2d3,
+    -3px -3px 6px #ffffff;
 }
 
 .MobileCard:active,
 .MobileCard:focus,
 .MobileCard:visited {
   outline: none;
-  box-shadow: 3px 3px 6px #d0d2d3,
-              -3px -3px 6px #ffffff;
+  box-shadow:
+    3px 3px 6px #d0d2d3,
+    -3px -3px 6px #ffffff;
 }
 
 /* Image wrapper */
@@ -406,7 +465,7 @@ body {
 }
 
 .mobileImage {
-  width: 90%;
+  width: 80%;
   margin: 2vh 0 1vh 0;
   border-radius: 6px;
 }
@@ -414,7 +473,7 @@ body {
 /* Title */
 #card-name {
   color: #323a40;
-  font-size: 2.0vh;
+  font-size: 2vh;
   font-family: "Arsenal", sans-serif;
   font-weight: bold;
   display: -webkit-box;
@@ -534,7 +593,37 @@ body {
 /* Desktop adjustments */
 @media (min-width: 768px) {
   .MobileCard {
-    width: 28vw;
+    width: 33vw;
+    padding: 1rem;
+  }
+  .bn-title{
+    font-size: 4.5vh;
+  }
+  .mobileImage {
+    width: 80%;
+  }
+  .rating-number {
+    font-size: 2vh;
+    margin-left: 3vw;
+  }
+  .cardLogo {
+    height: 1.2rem;
+  }
+  #card-name {
+    font-size: 2.3vh;
+  }
+  .mobileDiscount {
+    font-size: 3.7vw;
+  }
+  #card-discout {
+    gap: 30px;
+  }
+  .mobileMRP {
+    font-size: 3.7vw;
+  }
+  .finalPrice {
+    font-size: 3.7vw;
+    padding: 0.5rem 1.5rem;
   }
 }
 
@@ -554,12 +643,12 @@ body {
   text-align: start;
   font-family: "Alegreya SC", serif;
   color: #0e192a;
-  font-size: 3.5vh;
+  font-size: 4vh;
   letter-spacing: 1px;
-  
+
   font-weight: 400;
   margin-bottom: 3vh;
-  margin-left: 3vw;
+  margin-left: 5vw;
 }
 .repair-data {
   margin-top: 3vh;
@@ -573,7 +662,7 @@ body {
 .repair-data p {
   font-size: 18px;
   line-height: 1.5;
-  width: 85vw; 
+  width: 85vw;
   text-align: justify;
   font-family: "Alice", serif;
 }
@@ -582,17 +671,12 @@ body {
   text-decoration: none;
   display: inline-block;
   width: fit-content;
- color: white;
+  color: white;
   background-color: #323a40;
   padding: 1vh 5vw;
   border-radius: 12px;
-   /* Gradient */
-  background: linear-gradient(
-    135deg,
-    #1f262b 0%,
-    #323a40 50%,
-    #3e474e 100%
-  );
+  /* Gradient */
+  background: linear-gradient(135deg, #1f262b 0%, #323a40 50%, #3e474e 100%);
 
   /* Shadow */
   box-shadow:
@@ -611,61 +695,77 @@ body {
   border-radius: 12px;
 }
 
+@media (min-width: 768px) {
+  .repair-data p {
+    font-size: 28px;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+  }
+  #repair-title{
+    font-size: 4.5vh;
+  }
+  .repair-img {
+    margin-top: 2vh;
+  }
+  .repair-data a {
+    font-size: 22px;
+    padding: 1.5vh 4vw;
+  }
+}
+
 /* ================contact========== */
 
-.contact-section h2{
-   text-align: start;
+.contact-section h2 {
+  text-align: start;
   font-family: "Alegreya SC", serif;
   color: #0e192a;
-  font-size: 3.5vh;
+  font-size: 4vh;
   letter-spacing: 1px;
   margin-top: 5vh;
   font-weight: 400;
   margin-bottom: 4vh;
-  margin-left: 3vw;
+  margin-left: 5vw;
 }
 
-#contact-conatiner{
+#contact-conatiner {
   width: 100vw;
   position: relative;
-  padding-bottom: 52vh; 
+  padding-bottom: 52vh;
 }
 
-#map{
-width:80vw;
-position: absolute;
-right: 3vw;
-border-radius: 12px;
+#map {
+  width: 80vw;
+  position: absolute;
+  right: 3vw;
+  border-radius: 12px;
 }
 
-
-
-.contact-icons{
+.contact-icons {
   position: absolute;
   z-index: 2;
   left: 3vw;
   display: flex;
   flex-direction: column;
-  
   justify-content: space-evenly;
 }
 
-.ribon-name i{
+.ribon-name i {
   font-size: 2.3vh;
 }
-.ribon-name h3{
+.ribon-name h3 {
   font-size: 2.1vh;
 }
-.ribon-name{
+.ribon-name {
+  margin-bottom: 1vh;
   display: flex;
   color: #0e2a47;
   font-family: "Inika", serif;
   gap: 3vw;
 }
 
-.contact-icon{
+.contact-icon {
   text-decoration: none;
-  margin-top: 4vh;
+  margin-top: 3vh;
   margin-bottom: 1vh;
   font-size: 17px;
   color: #0e2a47;
@@ -694,7 +794,7 @@ border-radius: 12px;
   border-radius: 18px;
   display: flex;
   flex-direction: column;
-  gap: 1.5vh;
+  gap: 2vh;
   font-family: "Alice", serif;
   margin-bottom: 4vh;
 }
@@ -711,8 +811,9 @@ border-radius: 12px;
 .contact-form textarea {
   padding: 1vh 3vw;
   border-radius: 8px;
-  border: 1px solid #ccd6e0;
+  border: none;
   font-size: 15px;
+  background-color: #f5f7f8;
   outline: none;
   transition: 0.3s;
 }
@@ -720,7 +821,7 @@ border-radius: 12px;
 .contact-form input:focus,
 .contact-form textarea:focus {
   border-color: #192f49;
-  box-shadow: 0 0 0 2px rgba(25,47,73,0.1);
+  box-shadow: 0 0 0 2px rgba(25, 47, 73, 0.1);
 }
 
 .contact-form button {
@@ -738,6 +839,50 @@ border-radius: 12px;
   background: #0e2a47;
 }
 
+@media (min-width: 768px) {
+  #map {
+    width: 75vw;
+  }
+  .contact-icons{
+  left: 5vw;
+  }
+  .ribon-name i {
+  font-size: 2.7vh;
+}
+.contact-section h2{
+  font-size: 4.5vh;
+}
+.ribon-name h3 {
+  font-size: 2.5vh;
+}
+  .ribon-name{
+    margin-bottom: 1vh;
+  }
+  #contact-conatiner{
+    padding-bottom: 75vh;
+  }
+  .contact-icon{
+    width: 35vw;
+    font-size: 28px;
+     margin-top: 5vh;
+    padding: 1.5vh 7vw;
+    border-top-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+  }
+  .contact-form input,
+.contact-form textarea{
+  padding: 1.2vh 5vw;
+  font-size: 20px;
+}
+.contact-form{
+   gap: 3vh;
+}
+.contact-form button{
+  padding: 1.3vh 0;
+  font-size: 20px;
+}
+  
+}
 
 /* ================= HM FOOTER ================= */
 
@@ -747,8 +892,9 @@ border-radius: 12px;
   padding: 50px 5% 20px;
   font-family: "Arsenal", sans-serif;
 }
-#footer-img{
-  width: 40vw;
+#footer-img {
+  width: 50vw;
+  margin-bottom: 2vh;
 }
 
 .hm-footer-container {
@@ -822,19 +968,37 @@ border-radius: 12px;
   color: white;
   padding: 1vh 5vw;
   background-color: #323a40;
-  border-top: 1px solid rgba(255,255,255,0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
   font-size: 14px;
 }
 
 /* Responsive */
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .hm-footer-container {
     flex-direction: column;
-    gap: 30px;
+    gap: 50px;
+  }
+  .hm-footer-about{
+    font-size: 22px;
+  }
+  .hm-footer-heading{
+    font-size: 32px;
+  }
+  .footer-contact i{
+    font-size: 24px;
+  }
+  .footer-contact li{
+     font-size: 24px;
+     gap: 26px;
+  }
+  .hm-footer-list li{
+    font-size: 24px;
+  }
+  .hm-footer-bottom{
+     font-size: 24px;
   }
 }
-
 
 /* ===== Success Modal ===== */
 
@@ -863,7 +1027,7 @@ border-radius: 12px;
   padding: 4vh 5vw;
   border-radius: 20px;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   font-family: "Alice", serif;
   animation: popUp 0.3s ease;
 }
@@ -976,7 +1140,7 @@ border-radius: 12px;
   font-size: 18px;
   font-family: "Alice", serif;
   padding: 10px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   transition: 0.3s;
 }
 
