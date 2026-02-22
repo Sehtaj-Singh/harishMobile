@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setInterval(() => {
     index = (index + 1) % slides.length;
     moveToSlide(index);
-  }, 4000);
+  }, 6000);
 
   // Dynamic footer year
   const yearElement = document.getElementById("currentYear");
@@ -202,4 +202,36 @@ document.addEventListener("DOMContentLoaded", () => {
     const filled = wrapper.querySelector(".stars-filled");
     if (filled) filled.style.width = pct + "%";
   });
+
+  // Contact Form Modal Logic
+
+  const form = document.querySelector(".contact-form");
+  const modal = document.getElementById("successModal");
+  const closeModal = document.getElementById("closeModal");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // stop page reload
+
+    // show modal
+    modal.classList.add("active");
+
+    // reset form
+    form.reset();
+  });
+
+  // close modal button
+  closeModal.addEventListener("click", function () {
+    modal.classList.remove("active");
+  });
+
+  // close when clicking outside
+  modal.addEventListener("click", function (e) {
+    if (e.target === modal) {
+      modal.classList.remove("active");
+    }
+  });
+
+  
+
+  
 });
