@@ -1,0 +1,243 @@
+/* ================contact========== */
+
+.contact-section h2 {
+  text-align: start;
+  font-family: "Alegreya SC", serif;
+  color: #0e192a;
+  font-size: 4vh;
+  letter-spacing: 1px;
+  margin-top: 5vh;
+  font-weight: 400;
+  margin-bottom: 4vh;
+  margin-left: 5vw;
+}
+
+#contact-conatiner {
+  width: 100vw;
+  position: relative;
+  margin-bottom: 4vh;
+}
+
+#map {
+  width: 80vw;
+  border-radius: 12px;
+  margin-left: 15vw;
+}
+
+.contact-icons {
+  position: absolute;
+  z-index: 2;
+  left: 3vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  top: 0;
+}
+
+.ribon-name i {
+  font-size: 2.3vh;
+}
+.ribon-name h3 {
+  font-size: 2.1vh;
+}
+.ribon-name {
+  margin-bottom: 1vh;
+  display: flex;
+  color: #0e2a47;
+  font-family: "Inika", serif;
+  gap: 3vw;
+}
+
+.contact-icon {
+  text-decoration: none;
+  margin-top: 3vh;
+  margin-bottom: 1vh;
+  font-size: 17px;
+  color: #0e2a47;
+  font-family: "Inika", serif;
+  display: block;
+  z-index: 3;
+  background-color: #566f7c;
+  width: 40vw;
+  border-top-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  box-shadow: 2px 6px 8px #00000095;
+  background: linear-gradient(135deg, #ddecff 0%, #a8c8fc 50%, #617394 100%);
+  padding: 1vh 5vw;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ===== Contact Form ===== */
+
+.contact-form {
+  width: 80vw;
+  border: 1px solid #0e192a;
+  margin-left: 5vw;
+  padding: 2vh 5vw;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  font-family: "Alice", serif;
+  margin-bottom: 4vh;
+}
+
+.form-title {
+  font-size: 2.7vh;
+  text-align: center;
+  font-family: "Alice", serif;
+  color: #0e192a;
+  margin-bottom: 1vh;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 1vh 3vw;
+  border-radius: 8px;
+  border: none;
+  font-size: 15px;
+  background-color: #f5f7f8;
+  outline: none;
+  transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #192f49;
+  box-shadow: 0 0 0 2px rgba(25, 47, 73, 0.1);
+}
+
+.contact-form button {
+  background: #323a40;
+  color: #fff;
+  border: none;
+  padding: 1vh;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #0e2a47;
+}
+
+@media (min-width: 768px) {
+  #map {
+    width: 75vw;
+  }
+  .contact-icons {
+    left: 5vw;
+  }
+  .ribon-name i {
+    font-size: 2.7vh;
+  }
+  .contact-section h2 {
+    font-size: 4.5vh;
+  }
+  .ribon-name h3 {
+    font-size: 2.5vh;
+  }
+  .ribon-name {
+    margin-bottom: 1vh;
+  }
+  #contact-conatiner {
+    margin-bottom: 6vh;
+  }
+  .contact-icon {
+    width: 35vw;
+    font-size: 28px;
+    margin-top: 5vh;
+    padding: 1.5vh 7vw;
+    border-top-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    padding: 1.2vh 5vw;
+    font-size: 20px;
+  }
+  .contact-form {
+    gap: 3vh;
+  }
+  .contact-form button {
+    padding: 1.3vh 0;
+    font-size: 20px;
+  }
+}
+
+/* ===== Success Modal ===== */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+  z-index: 9999;
+}
+
+.modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background: #ffffff;
+  width: 85vw;
+  max-width: 400px;
+  padding: 4vh 5vw;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  font-family: "Alice", serif;
+  animation: popUp 0.3s ease;
+}
+
+@keyframes popUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modal-icon {
+  font-size: 45px;
+  color: #1f7a3f;
+  margin-bottom: 15px;
+}
+
+.modal-content h3 {
+  margin-bottom: 10px;
+  color: #192f49;
+}
+
+.modal-content p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.modal-content button {
+  background: #192f49;
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.modal-content button:hover {
+  background: #0e2a47;
+}
