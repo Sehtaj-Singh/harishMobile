@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mobile Detail</title>
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet" />
+
+
+  <!-- Font Awesome kit -->
+  <link rel="stylesheet" href="assets/icons/css/fontawesome.min.css">
+  <link rel="stylesheet" href="assets/icons/css/solid.min.css">
+  <link rel="stylesheet" href="assets/icons/css/brands.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/mobile.css" />
+  <link rel="stylesheet" href="assets/css/global.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="logo">
+      <img id="i-1" src="assets/images/cardLogo2.png">
+    </div>
+
+    <!-- Desktop Nav -->
+    <nav class="nav-links">
+      <a href="#">Home</a>
+      <a href="#top-seller">Mobiles</a>
+      <a href="#repair-title">Repair</a>
+      <a href="https://wa.me/918572002626" target="_blank" rel="noopener">
+        Contact
+      </a>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button class="menu-btn" aria-label="Open menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </header>
+
+  <div class="product-container">
+
+    <!-- LEFT: IMAGE CAROUSEL -->
+    <div class="product-slider">
+
+      <div class="carousel">
+
+        <button class="carousel-btn prev" id="prevBtn">&#10094;</button>
+
+        <div class="carousel-track-wrapper">
+          <div class="carousel-track" id="carouselTrack"></div>
+        </div>
+
+        <button class="carousel-btn next" id="nextBtn">&#10095;</button>
+
+      </div>
+
+    </div>
+
+    <!-- RIGHT: PRODUCT DETAILS -->
+    <div class="product-details">
+      <h1 id="productName"></h1>
+      <p id="cardData"></p>
+
+
+      <div class="rating" id="rating"></div>
+    </div>
+
+    <div class="price-section">
+      <div id="price-all">
+        <div>
+          <span class="mrp" id="mrp"></span>
+          <span class="discount" id="discount"></span>
+        </div>
+        <span class="price" id="price"></span>
+
+      </div>
+      <div id="razorpay-container"></div>
+    </div>
+
+
+
+
+
+    <!-- Assurance badges -->
+    <div class="assurance-wrap" aria-label="Assurance details">
+      <div class="assurance-item" role="group" aria-label="7-day exchange">
+        <img src="assets/images/exchange1.png">
+        <span>7-day exchange</span>
+      </div>
+
+      <div class="assurance-item" role="group" aria-label="Secure delivered">
+        <img src="assets/images/ship.png">
+        <span>Secure delivered</span>
+      </div>
+
+      <div class="assurance-item" role="group" aria-label="No return allowed">
+        <img src="assets/images/ban.png">
+        <span id="red">No return allowed</span>
+      </div>
+    </div>
+
+    <!-- Delivery Section -->
+    <section class="delivery-section" id="delivery">
+      <div class="delivery-icon">
+        <h2>Estimated Delivery :</h2>
+
+      </div>
+      <div class="delivery-text">
+        <img src="assets/images/truck1.png">
+
+        <p id="delivery-date">Loading...</p>
+      </div>
+    </section>
+
+    <!-- Product Specifications -->
+   <section class="specs-section">
+
+  <h2 class="specs-title">Specifications :</h2>
+
+  <div class="specs-tiles" id="specsTiles"></div>
+
+  <div class="see-more-wrap">
+      <button id="seeMoreBtn" class="see-more-btn">See more</button>
+  </div>
+
+</section>
+
+  </div>
+
+  <!-- Mobile Nav Modal -->
+  <div id="mobileNav" class="mobile-nav">
+    <div class="mobile-nav-panel">
+
+      <div class="mobile-nav-top">
+        <h3>Menu</h3>
+        <i class="fa-solid fa-xmark" id="closeNav"></i>
+      </div>
+
+      <div class="mobile-nav-links">
+        <a href="#">Home</a>
+        <a href="#top-seller">Products</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <script src="assets/javascript/global.js"></script>
+  <script src="assets/javascript/mobile.js"></script>
+</body>
+
+</html>

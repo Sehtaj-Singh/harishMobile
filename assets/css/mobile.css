@@ -1,0 +1,313 @@
+body{
+  padding-bottom: 8vh;
+}
+
+/* ===== CAROUSEL ===== */
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-track-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-slide img {
+  width: 80%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* arrows */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  color: white;
+  border: none;
+  font-size: 22px;
+  padding: 8px 12px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+
+
+/* Assurance badges */
+.assurance-wrap {
+  margin: 1vh 4vw;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 1vh;
+  border-bottom: 1px solid #454545bc;
+}
+
+.assurance-item {
+  margin-top: 1vh;
+  padding: 12px 8px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.assurance-item img {
+  width: 3.5vh;
+}
+
+.assurance-item span {
+  font-size: 0.8rem;
+  color: #323a40;
+  font-family: "Alice", serif;
+  color: rgb(27, 123, 27);
+}
+.assurance-item #red {
+  font-size: 0.8rem;
+  color: #323a40;
+  font-family: "Alice", serif;
+  color: rgb(169, 34, 34);
+}
+
+
+/* ==========data========== */
+
+#productName{
+  margin-top: 3vh;
+  padding: 1vh 4vw;
+  font-size: 2.8vh;
+  font-family: "Arsenal", sans-serif;
+}
+
+
+/* ==========delivery========== */
+
+.delivery-text {
+  display: flex;
+  gap: 5vw;
+  margin-top: 1.7vh;
+  align-items: end;
+  font-size: 2.1vh;
+  color: #323a40;
+  font-family: "Alice", serif;
+}
+.delivery-text img {
+  width: 3.5vh;
+}
+
+.delivery-icon h2 {
+  color: #192f49;
+  font-family: "Arsenal", sans-serif;
+  font-size: 2.6vh;
+  letter-spacing: 1px;
+  
+}
+
+.delivery-section{
+margin: 1vh 4vw;
+  padding-bottom: 2vh;
+  border-bottom: 1px solid #454545bc;
+}
+
+/* ============bottom nav========== */
+.price-section{
+  position: fixed;
+  bottom: 0;
+  height: 7vh;
+  width: 100vw;
+  z-index: 700;
+  left: 0;
+  display: flex;
+  background-color: #fff;
+}
+
+/* ============================= */
+/* SPECIFICATION SECTION */
+/* ============================= */
+
+.specs-section {
+  position: relative;
+  margin-top: 3vh;
+  padding-top: 1vh;
+  overflow: hidden;
+}
+
+.specs-title {
+  font-size: 2.8vh;
+  margin-bottom: 8px;
+  margin-left: 4vw;
+  color: #192f49;
+  font-family: "Arsenal", sans-serif;
+  letter-spacing: 1px;
+}
+
+/* ============================= */
+/* TILE CONTAINER */
+/* ============================= */
+
+.specs-tiles {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 4vw;
+  width: 92vw;
+}
+
+/* ============================= */
+/* TILE */
+/* ============================= */
+
+.spec-tile {
+  background: #f5f7f8;
+  border: 1px solid #555;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* ============================= */
+/* TILE HEADER */
+/* ============================= */
+
+.spec-head {
+  width: 100%;
+  padding: 12px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: transparent;
+  border: none;
+
+  font-size: 1rem;
+  font-family: "Alice", serif;
+  color: #323a40;
+
+  cursor: pointer;
+}
+
+.spec-head i {
+  transition: transform 0.28s ease;
+}
+
+/* arrow rotate */
+
+.spec-tile.open .spec-head i {
+  transform: rotate(180deg);
+}
+
+/* ============================= */
+/* TILE BODY */
+/* ============================= */
+
+.spec-body {
+  padding: 0 14px;
+  max-height: 0;
+  overflow: hidden;
+
+  background: #fff;
+
+  transition: max-height 0.3s ease, padding 0.2s ease;
+}
+
+.spec-tile.open .spec-body {
+  padding: 10px 14px 12px;
+  max-height: 480px;
+}
+
+/* ============================= */
+/* SPEC LIST */
+/* ============================= */
+
+.spec-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.spec-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 0;
+
+  border-bottom: 1px solid #1c20277e;
+}
+
+.spec-list li:last-child {
+  border-bottom: none;
+}
+
+.spec-name {
+  font-family: "Alice", serif;
+  color: #555;
+}
+
+.spec-value {
+  font-family: "Alice", serif;
+  color: #2c5080;
+}
+
+/* ============================= */
+/* SEE MORE BUTTON */
+/* ============================= */
+
+.see-more-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.see-more-btn {
+  display: none;
+
+  margin-top: 12px;
+  margin-bottom: 2vh;
+
+  padding: 1vh 6vw;
+
+  border: none;
+  border-radius: 12px;
+
+  font-family: "Alice", serif;
+  letter-spacing: 1px;
+
+  background: #1d4375;
+  color: #e2e3e2;
+
+  box-shadow: 2px 4px 6px #00000070;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.see-more-btn:hover {
+  transform: scale(1.05);
+}

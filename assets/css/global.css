@@ -171,3 +171,38 @@ body {
   color: #f5c518;
   transform: translateX(5px);
 }
+
+/* Rating */
+.mobileRating {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 0.6vh;
+}
+
+.mobileRating .star-wrapper {
+  position: relative;
+  display: inline-block;
+  font-size: 1.5vh;
+}
+
+.mobileRating .stars-empty {
+  color: #ddd;
+  white-space: nowrap;
+}
+
+.mobileRating .stars-filled {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  color: #f5c518;
+}
+
+.rating-number {
+  font-size: 1.8vh;
+  margin-left: 5px;
+  color: #192f49c5;
+  font-family: "Alice", serif;
+}
