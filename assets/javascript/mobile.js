@@ -246,7 +246,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return n + "th";
     }
   }
-
+ 
   const dayName = deliveryDate.toLocaleString("en-US", { weekday: "long" });
   const day = getOrdinal(deliveryDate.getDate());
   const month = deliveryDate.toLocaleString("en-US", { month: "long" });
